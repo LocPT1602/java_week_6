@@ -2,13 +2,24 @@ package com.mycompany.shopproject;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import java.util.List;
+import java.util.ArrayList;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+
 
 /**
  *
  * @author admin
  */
 public class Khachsan extends javax.swing.JFrame {
-
+    static int countnv;
+    private boolean radioselect1,radioselect2,radioselect3,boxselect1,boxselect2,boxselect3,boxselect4,boxselect5;
+    private int tongTienMotNguoi;
+    static List<Integer> danhSachTien = new ArrayList<>();
     /**
      * Creates new form Khachsan
      */
@@ -93,7 +104,7 @@ public class Khachsan extends javax.swing.JFrame {
 
         jLabel3.setText("Địa chỉ");
 
-        jLabel4.setText("số ngày đi");
+        jLabel4.setText("Số ngày đi");
 
         jLabel5.setText("Loại phòng");
 
@@ -102,43 +113,114 @@ public class Khachsan extends javax.swing.JFrame {
         jLabel7.setText("Dịch vụ");
 
         jRadioButton1.setText("Phòng đơn");
+        jRadioButton1.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) { 
+                    tongTienMotNguoi += 300000;
+                    radioselect1 = true;
+                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                    if (radioselect1) {
+                        tongTienMotNguoi -= 300000;
+                    }
+                }
+            }
+        });
 
         jRadioButton2.setText("Phòng đôi");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+        jRadioButton2.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    tongTienMotNguoi += 350000;
+                    radioselect2 = true;
+                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                    if (radioselect2) {
+                        tongTienMotNguoi -= 350000;
+                    }
+                }
             }
         });
 
         jRadioButton3.setText("Phòng ba");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+        jRadioButton3.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    tongTienMotNguoi += 400000;
+                    radioselect3  = true;
+                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                    if (radioselect3) {
+                        tongTienMotNguoi -= 400000;
+                    }
+                }
             }
         });
-
+        
         jCheckBox1.setText("Internet");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+        jCheckBox1.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    tongTienMotNguoi += 10000;
+                    boxselect1 = true;
+                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                    if (boxselect1) {
+                        tongTienMotNguoi -= 10000;
+                    }
+                }
             }
         });
 
         jCheckBox2.setText("Tivi");
+        jCheckBox2.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    tongTienMotNguoi += 10000;
+                    boxselect2 = true;
+                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                    if (boxselect2) {
+                    tongTienMotNguoi -= 10000;
+                    }
+                }
+            }
+        });
 
         jCheckBox3.setText("Máy nước nóng");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+        jCheckBox3.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    tongTienMotNguoi += 10000;
+                    boxselect3 = true;
+                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                    if (boxselect3) {
+                    tongTienMotNguoi -= 10000;
+                    }
+                }
             }
         });
 
         jCheckBox4.setText("Ăn sáng");
+        jCheckBox4.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    tongTienMotNguoi += 15000;
+                    boxselect4 = true;
+                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                    if (boxselect4) {
+                        tongTienMotNguoi -= 15000;
+                    }
+                }
+            }
+        });
 
         jCheckBox5.setText("Karaok");
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+        jCheckBox5.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    boxselect5 = true;
+                    tongTienMotNguoi += 50000;
+                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                    if (boxselect5) {
+                        tongTienMotNguoi -= 50000;
+                    }
+                }
             }
         });
 
@@ -229,11 +311,24 @@ public class Khachsan extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
         jButton1.setText("Nhập mới");
+        jButton1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                jTextField1.setText("");
+                jTextField2.setText("");
+                jTextField3.setText("");
+                jTextField4.setText("");
+            }
+        });
 
         jButton2.setText("Thanh toán");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        jButton2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                countnv++;
+                int songay = Integer.parseInt(jTextField1.getText());
+                tongTienMotNguoi *= songay;
+                danhSachTien.add(tongTienMotNguoi);
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+                tongTienMotNguoi = 0;
             }
         });
 
