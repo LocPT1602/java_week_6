@@ -1,7 +1,11 @@
 package com.mycompany.shopproject;
 
+import javax.print.Doc;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.awt.event.ItemEvent;
@@ -107,17 +111,57 @@ public class Khachsan extends javax.swing.JFrame {
 
         jLabel7.setText("Dịch vụ");
 
+        // phần ẩn hiện button
+        jButton2.setEnabled(false);
+        jButton1.setEnabled(false);
+        jButton3.setEnabled(false);
+        DocumentListener documentListener = new DocumentListener() {
+            public void insertUpdate(DocumentEvent e){
+                UpdateButtonState();
+            }
+            public void removeUpdate(DocumentEvent e){
+                UpdateButtonState();
+
+            }
+            public void changedUpdate(DocumentEvent e){
+                UpdateButtonState();
+            }
+            public void UpdateButtonState(){
+                // boolean jButton2 = true;
+                String txt1 = jTextField1.getText();
+                String txt2 = jTextField2.getText();
+                String txt3 = jTextField3.getText();
+                // jButton2.setEnabled(false);
+                if(txt1.isBlank() || txt2.isBlank() || txt3.isBlank()){
+                    
+                    jButton2.setEnabled(false);
+                }
+                else {
+                    jButton2.setEnabled(true);
+                }
+
+            }
+        };
+        jTextField1.getDocument().addDocumentListener(documentListener);
+        jTextField2.getDocument().addDocumentListener(documentListener);
+        jTextField3.getDocument().addDocumentListener(documentListener);
+
         jRadioButton1.setText("Phòng đơn");
         jRadioButton1.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) { 
-                    tongTienMotNguoi += 300000;
+                        int songay = Integer.parseInt(jTextField1.getText());
+                    tongTienMotNguoi += songay*300000;
                     radioselect1 = true;
+                    jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                 } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                     if (radioselect1) {
-                        tongTienMotNguoi -= 300000;
+                         int songay = Integer.parseInt(jTextField1.getText());
+                        tongTienMotNguoi -= songay*300000;
                         radioselect1 = false;
-
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+                    
                     }
                 }
             }
@@ -127,12 +171,18 @@ public class Khachsan extends javax.swing.JFrame {
         jRadioButton2.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 350000;
+                     int songay = Integer.parseInt(jTextField1.getText());
+                    tongTienMotNguoi += songay*350000;
                     radioselect2 = true;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                 } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                     if (radioselect2) {
-                        tongTienMotNguoi -= 350000;
+                         int songay = Integer.parseInt(jTextField1.getText());
+                        tongTienMotNguoi -= songay*350000;
                         radioselect2 = false;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                     }
                 }
             }
@@ -142,12 +192,18 @@ public class Khachsan extends javax.swing.JFrame {
         jRadioButton3.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 400000;
+                     int songay = Integer.parseInt(jTextField1.getText());
+                    tongTienMotNguoi += songay*400000;
                     radioselect3  = true;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                 } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                     if (radioselect3) {
-                        tongTienMotNguoi -= 400000;
+                         int songay = Integer.parseInt(jTextField1.getText());
+                        tongTienMotNguoi -= songay*400000;
                         radioselect3 = false;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                     }
                 }
             }
@@ -157,12 +213,18 @@ public class Khachsan extends javax.swing.JFrame {
         jCheckBox1.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 10000;
+                    int songay = Integer.parseInt(jTextField1.getText());
+                    tongTienMotNguoi += songay*10000;
                     boxselect1 = true;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                 } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                     if (boxselect1) {
-                        tongTienMotNguoi -= 10000;
+                        int songay = Integer.parseInt(jTextField1.getText());
+                        tongTienMotNguoi -= songay*10000;
                         boxselect1 = false;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                     }
                 }
             }
@@ -172,12 +234,18 @@ public class Khachsan extends javax.swing.JFrame {
         jCheckBox2.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 10000;
+                     int songay = Integer.parseInt(jTextField1.getText());
+                    tongTienMotNguoi += songay*10000;
                     boxselect2 = true;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                 } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                     if (boxselect2) {
-                        tongTienMotNguoi -= 10000;
+                         int songay = Integer.parseInt(jTextField1.getText());
+                        tongTienMotNguoi -= songay*10000;
                         boxselect2 = false;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                     }
                 }
             }
@@ -187,12 +255,18 @@ public class Khachsan extends javax.swing.JFrame {
         jCheckBox3.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 10000;
+                     int songay = Integer.parseInt(jTextField1.getText());
+                    tongTienMotNguoi += songay*10000;
                     boxselect3 = true;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                 } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                     if (boxselect3) {
-                        tongTienMotNguoi -= 10000;
+                         int songay = Integer.parseInt(jTextField1.getText());
+                        tongTienMotNguoi -= songay*10000;
                         boxselect3 = false;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                     }
                 }
             }
@@ -202,12 +276,20 @@ public class Khachsan extends javax.swing.JFrame {
         jCheckBox4.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 15000;
+                     int songay = Integer.parseInt(jTextField1.getText());
+                    ;
+                    tongTienMotNguoi += songay*15000;
                     boxselect4 = true;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                 } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                     if (boxselect4) {
-                        tongTienMotNguoi -= 15000;
+                         int songay = Integer.parseInt(jTextField1.getText());
+                    ;
+                        tongTienMotNguoi -= songay*15000;
                         boxselect4 = false;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                     }
                 }
             }
@@ -217,12 +299,20 @@ public class Khachsan extends javax.swing.JFrame {
         jCheckBox5.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
+                     int songay = Integer.parseInt(jTextField1.getText());
+                    ;
                     boxselect5 = true;
-                    tongTienMotNguoi += 50000;
+                   tongTienMotNguoi += songay* 50000;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                 } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                     if (boxselect5) {
-                        tongTienMotNguoi -= 50000;
+                         int songay = Integer.parseInt(jTextField1.getText());
+                    ;
+                        tongTienMotNguoi -= songay*50000;
                         boxselect5 = false;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
                     }
                 }
             }
@@ -324,25 +414,26 @@ public class Khachsan extends javax.swing.JFrame {
                 jTextField2.setText("");
                 jTextField3.setText("");
                 jTextField4.setText("");
-        
                 buttonGroup1.clearSelection();
-                
                 jCheckBox1.setSelected(false);
                 jCheckBox2.setSelected(false);
                 jCheckBox3.setSelected(false);
                 jCheckBox4.setSelected(false);
                 jCheckBox5.setSelected(false);
-
                 radioselect1 = false;
                 radioselect2 = false;
                 radioselect3 = false;
-
                 boxselect1 = false;
                 boxselect2 = false;
                 boxselect3 = false;
                 boxselect4 = false;
                 boxselect5 = false;
-                tongTienMotNguoi=0;
+            
+                tongTienMotNguoi= 0;
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+              
+             
+                
             }
         });
         
@@ -352,12 +443,19 @@ public class Khachsan extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 
                 countnv++;
-                int songay = Integer.parseInt(jTextField1.getText());
-                tongTienMotNguoi *= songay;
+                // int songay = Integer.parseInt(jTextField1.getText());
+                // tongTienMotNguoi *= songay;
                 danhSachTien.add(tongTienMotNguoi);
-                jTextField4.setText(String.valueOf(tongTienMotNguoi));
-                
                 tongTienMotNguoi=0;
+
+                jTextField4.setText(String.valueOf(tongTienMotNguoi));
+                jButton1.doClick();
+                jButton1.setEnabled(true);
+                jButton3.setEnabled(true);
+                
+                
+                
+
                 
                 
                 
