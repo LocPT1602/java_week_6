@@ -113,116 +113,116 @@ public class Khachsan extends javax.swing.JFrame {
         jLabel7.setText("Dịch vụ");
 
         jRadioButton1.setText("Phòng đơn");
-        jRadioButton1.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) { 
-                    tongTienMotNguoi += 300000;
-                    radioselect1 = true;
-                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
-                    if (radioselect1) {
-                        tongTienMotNguoi -= 300000;
-                    }
-                }
-            }
-        });
+        // jRadioButton1.addItemListener(new ItemListener() {
+        //     public void itemStateChanged(ItemEvent e) {
+        //         if (e.getStateChange() == ItemEvent.SELECTED) { 
+        //             tongTienMotNguoi += 300000;
+        //             radioselect1 = true;
+        //         } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+        //             if (radioselect1) {
+        //                 tongTienMotNguoi -= 300000;
+        //             }
+        //         }
+        //     }
+        // });
 
         jRadioButton2.setText("Phòng đôi");
-        jRadioButton2.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 350000;
-                    radioselect2 = true;
-                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
-                    if (radioselect2) {
-                        tongTienMotNguoi -= 350000;
-                    }
-                }
-            }
-        });
+        // jRadioButton2.addItemListener(new ItemListener() {
+        //     public void itemStateChanged(ItemEvent e) {
+        //         if (e.getStateChange() == ItemEvent.SELECTED) {
+        //             tongTienMotNguoi += 350000;
+        //             radioselect2 = true;
+        //         } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+        //             if (radioselect2) {
+        //                 tongTienMotNguoi -= 350000;
+        //             }
+        //         }
+        //     }
+        // });
 
         jRadioButton3.setText("Phòng ba");
-        jRadioButton3.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 400000;
-                    radioselect3  = true;
-                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
-                    if (radioselect3) {
-                        tongTienMotNguoi -= 400000;
-                    }
-                }
-            }
-        });
+        // jRadioButton3.addItemListener(new ItemListener() {
+        //     public void itemStateChanged(ItemEvent e) {
+        //         if (e.getStateChange() == ItemEvent.SELECTED) {
+        //             tongTienMotNguoi += 400000;
+        //             radioselect3  = true;
+        //         } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+        //             if (radioselect3) {
+        //                 tongTienMotNguoi -= 400000;
+        //             }
+        //         }
+        //     }
+        // });
         
         jCheckBox1.setText("Internet");
-        jCheckBox1.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 10000;
-                    boxselect1 = true;
-                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
-                    if (boxselect1) {
-                        tongTienMotNguoi -= 10000;
-                    }
-                }
-            }
-        });
+        // jCheckBox1.addItemListener(new ItemListener() {
+        //     public void itemStateChanged(ItemEvent e) {
+        //         if (e.getStateChange() == ItemEvent.SELECTED) {
+        //             tongTienMotNguoi += 10000;
+        //             boxselect1 = true;
+        //         } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+        //             if (boxselect1) {
+        //                 tongTienMotNguoi -= 10000;
+        //             }
+        //         }
+        //     }
+        // });
 
         jCheckBox2.setText("Tivi");
-        jCheckBox2.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 10000;
-                    boxselect2 = true;
-                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
-                    if (boxselect2) {
-                    tongTienMotNguoi -= 10000;
-                    }
-                }
-            }
-        });
+        // jCheckBox2.addItemListener(new ItemListener() {
+        //     public void itemStateChanged(ItemEvent e) {
+        //         if (e.getStateChange() == ItemEvent.SELECTED) {
+        //             tongTienMotNguoi += 10000;
+        //             boxselect2 = true;
+        //         } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+        //             if (boxselect2) {
+        //             tongTienMotNguoi -= 10000;
+        //             }
+        //         }
+        //     }
+        // });
 
         jCheckBox3.setText("Máy nước nóng");
-        jCheckBox3.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 10000;
-                    boxselect3 = true;
-                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
-                    if (boxselect3) {
-                    tongTienMotNguoi -= 10000;
-                    }
-                }
-            }
-        });
+        // jCheckBox3.addItemListener(new ItemListener() {
+        //     public void itemStateChanged(ItemEvent e) {
+        //         if (e.getStateChange() == ItemEvent.SELECTED) {
+        //             tongTienMotNguoi += 10000;
+        //             boxselect3 = true;
+        //         } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+        //             if (boxselect3) {
+        //             tongTienMotNguoi -= 10000;
+        //             }
+        //         }
+        //     }
+        // });
 
         jCheckBox4.setText("Ăn sáng");
-        jCheckBox4.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-                    tongTienMotNguoi += 15000;
-                    boxselect4 = true;
-                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
-                    if (boxselect4) {
-                        tongTienMotNguoi -= 15000;
-                    }
-                }
-            }
-        });
+        // jCheckBox4.addItemListener(new ItemListener() {
+        //     public void itemStateChanged(ItemEvent e) {
+        //         if (e.getStateChange() == ItemEvent.SELECTED) {
+        //             tongTienMotNguoi += 15000;
+        //             boxselect4 = true;
+        //         } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+        //             if (boxselect4) {
+        //                 tongTienMotNguoi -= 15000;
+        //             }
+        //         }
+        //     }
+        // });
 
         jCheckBox5.setText("Karaok");
-        jCheckBox5.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (e.getStateChange() == ItemEvent.SELECTED) {
-                    boxselect5 = true;
-                    tongTienMotNguoi += 50000;
-                } else if (e.getStateChange() == ItemEvent.DESELECTED) {
-                    if (boxselect5) {
-                        tongTienMotNguoi -= 50000;
-                    }
-                }
-            }
-        });
+        // jCheckBox5.addItemListener(new ItemListener() {
+        //     public void itemStateChanged(ItemEvent e) {
+        //         if (e.getStateChange() == ItemEvent.SELECTED) {
+        //             boxselect5 = true;
+        //             tongTienMotNguoi += 50000;
+        //         } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+        //             if (boxselect5) {
+        //                 tongTienMotNguoi -= 50000;
+        //             }
+        //         }
+        //     }
+        // });
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -313,22 +313,129 @@ public class Khachsan extends javax.swing.JFrame {
         jButton1.setText("Nhập mới");
         jButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                tongTienMotNguoi = 0;
+
                 jTextField1.setText("");
                 jTextField2.setText("");
                 jTextField3.setText("");
                 jTextField4.setText("");
+        
+                buttonGroup1.clearSelection();
+                
+                jCheckBox1.setSelected(false);
+                jCheckBox2.setSelected(false);
+                jCheckBox3.setSelected(false);
+                jCheckBox4.setSelected(false);
+                jCheckBox5.setSelected(false);
+
+                
             }
         });
+        
 
         jButton2.setText("Thanh toán");
         jButton2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                
+                jRadioButton1.addItemListener(new ItemListener() {
+                    public void itemStateChanged(ItemEvent e) {
+                        if (e.getStateChange() == ItemEvent.SELECTED) {
+                            tongTienMotNguoi += 300000;
+                            radioselect3  = true;
+                        } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                            if (radioselect3) {
+                                tongTienMotNguoi -= 300000;
+                            }
+                        }
+                    }
+                });
+                jRadioButton2.addItemListener(new ItemListener() {
+                    public void itemStateChanged(ItemEvent e) {
+                        if (e.getStateChange() == ItemEvent.SELECTED) {
+                            tongTienMotNguoi += 350000;
+                            radioselect3  = true;
+                        } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                            if (radioselect3) {
+                                tongTienMotNguoi -= 350000;
+                            }
+                        }
+                    }
+                });
+                jRadioButton3.addItemListener(new ItemListener() {
+                    public void itemStateChanged(ItemEvent e) {
+                        if (e.getStateChange() == ItemEvent.SELECTED) {
+                            tongTienMotNguoi += 400000;
+                            radioselect3  = true;
+                        } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                            if (radioselect3) {
+                                tongTienMotNguoi -= 400000;
+                            }
+                        }
+                    }
+                });
+                jCheckBox1.addItemListener(new ItemListener() {
+                    public void itemStateChanged(ItemEvent e) {
+                        if (e.getStateChange() == ItemEvent.SELECTED) {
+                            tongTienMotNguoi += 10000;
+                            boxselect1 = true;
+                        } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                            if (boxselect1) {
+                            tongTienMotNguoi -= 10000;
+                            }
+                        }
+                    }
+                });jCheckBox2.addItemListener(new ItemListener() {
+                    public void itemStateChanged(ItemEvent e) {
+                        if (e.getStateChange() == ItemEvent.SELECTED) {
+                            tongTienMotNguoi += 10000;
+                            boxselect2 = true;
+                        } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                            if (boxselect2) {
+                            tongTienMotNguoi -= 10000;
+                            }
+                        }
+                    }
+                });jCheckBox3.addItemListener(new ItemListener() {
+                    public void itemStateChanged(ItemEvent e) {
+                        if (e.getStateChange() == ItemEvent.SELECTED) {
+                            tongTienMotNguoi += 10000;
+                            boxselect3 = true;
+                        } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                            if (boxselect3) {
+                            tongTienMotNguoi -= 10000;
+                            }
+                        }
+                    }
+                });jCheckBox4.addItemListener(new ItemListener() {
+                    public void itemStateChanged(ItemEvent e) {
+                        if (e.getStateChange() == ItemEvent.SELECTED) {
+                            tongTienMotNguoi += 10000;
+                            boxselect4 = true;
+                        } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                            if (boxselect4) {
+                            tongTienMotNguoi -= 10000;
+                            }
+                        }
+                    }
+                });jCheckBox5.addItemListener(new ItemListener() {
+                    public void itemStateChanged(ItemEvent e) {
+                        if (e.getStateChange() == ItemEvent.SELECTED) {
+                            tongTienMotNguoi += 10000;
+                            boxselect5 = true;
+                        } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                            if (boxselect5) {
+                            tongTienMotNguoi -= 10000;
+                            }
+                        }
+                    }
+                });
+                
                 countnv++;
                 int songay = Integer.parseInt(jTextField1.getText());
                 tongTienMotNguoi *= songay;
                 danhSachTien.add(tongTienMotNguoi);
                 jTextField4.setText(String.valueOf(tongTienMotNguoi));
-                tongTienMotNguoi = 0;
+                // tongTienMotNguoi = 0;
             }
         });
 
@@ -341,9 +448,14 @@ public class Khachsan extends javax.swing.JFrame {
         });
 
         jButton3.setText("Tổng kết");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        jButton3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                jTextField6.setText(String.valueOf(countnv));
+                int tongTienTrongThang = 0;
+                for(Integer temp:danhSachTien){
+                    tongTienTrongThang += temp;
+                }
+                jTextField5.setText(String.valueOf(tongTienTrongThang));
             }
         });
 
