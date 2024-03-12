@@ -317,7 +317,8 @@ public class Khachsan extends javax.swing.JFrame {
         jButton1.setText("Nhập mới");
         jButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                tongTienMotNguoi = 0;
+
+                // tongTienMotNguoi = 0;
 
                 jTextField1.setText("");
                 jTextField2.setText("");
@@ -341,6 +342,7 @@ public class Khachsan extends javax.swing.JFrame {
                 boxselect3 = false;
                 boxselect4 = false;
                 boxselect5 = false;
+                tongTienMotNguoi=0;
             }
         });
         
@@ -354,6 +356,10 @@ public class Khachsan extends javax.swing.JFrame {
                 tongTienMotNguoi *= songay;
                 danhSachTien.add(tongTienMotNguoi);
                 jTextField4.setText(String.valueOf(tongTienMotNguoi));
+                
+                tongTienMotNguoi=0;
+                
+                
                 
             }
         });
