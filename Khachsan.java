@@ -159,6 +159,7 @@ public class Khachsan extends javax.swing.JFrame {
         jTextField1.getDocument().addDocumentListener(documentListener);
         jTextField2.getDocument().addDocumentListener(documentListener);
         jTextField3.getDocument().addDocumentListener(documentListener);
+        jTextField3.requestFocus();
 
         jRadioButton1.setText("Phòng đơn");
         jRadioButton1.addItemListener(new ItemListener() {
@@ -417,6 +418,8 @@ public class Khachsan extends javax.swing.JFrame {
         jButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 tat();
+                jButton1.setEnabled(false);
+                jTextField3.requestFocus();
 
                 jTextField1.setText("");
                 jTextField2.setText("");
@@ -442,6 +445,8 @@ public class Khachsan extends javax.swing.JFrame {
             
                 tongTienMotNguoi= 0;
                 jTextField4.setText(String.valueOf(tongTienMotNguoi));
+
+
             }
         });
         
