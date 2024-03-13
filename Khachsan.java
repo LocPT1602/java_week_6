@@ -3,6 +3,8 @@ package com.mycompany.shopproject;
 import javax.print.Doc;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
@@ -72,7 +74,9 @@ public class Khachsan extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        
+        
 
         jPanel1.setBackground(new java.awt.Color(24, 242, 242));
 
@@ -110,7 +114,19 @@ public class Khachsan extends javax.swing.JFrame {
         jLabel6.setText("Tiện nghi");
 
         jLabel7.setText("Dịch vụ");
+        // button exit 
+        jButton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to exit?", "Exit Confirmation", JOptionPane.YES_NO_OPTION);
+                if (option == JOptionPane.YES_OPTION) {
+                    System.exit(0);
+                }
+            }
+        });
+        
 
+        
         // phần ẩn hiện button
         jButton2.setEnabled(false);
         jButton1.setEnabled(false);
